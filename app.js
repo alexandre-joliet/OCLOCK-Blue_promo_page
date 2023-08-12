@@ -6,6 +6,8 @@ const express = require('express');
 
 // On initialise le server dans une variable
 const app = express();
+const path = require('path');
+app.use(express.static(path.join(__dirname, 'public')));
 
 // On importe la liste des étudiants
 const students = require('./students');
@@ -37,7 +39,7 @@ app.get('/students/:githubUsername', (req, res) => {
 // --- Bind & Listen ---
 // #########################
 // On branche notre server au port 3000 et on lui demande d'écouter les requêtes entrantes vers ce port
-app.listen(3001);
+app.listen(3000);
 
 
 // ##############################
@@ -49,15 +51,17 @@ app.listen(3001);
  * Génère la page d'accueil de notre site
  */
 function createHomePage() {
-  const html = 
-  `
+  const html = `
+ 
     <h1>${promo.name}</h1>
 
     <p>Il y a ${students.length} apprenants dans cette promo</p>
     <p>Cette promo est animée par ${promo.prof} et ${promo.helper}</p>
 
     <a href="/students">Voir la liste des étudiants</a>
-  
+
+  </body>
+  </html>
   `;
   return html;
 }
