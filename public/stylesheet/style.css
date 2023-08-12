@@ -1,0 +1,95 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400&display=swap');
+
+
+html {
+  font-size: 62.5%;
+}
+
+
+/* HEADER */
+h1 {
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 6rem;
+  font-weight: 700;
+}
+
+
+/* BODY */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.6rem;
+  margin: 0 2rem;
+}
+
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 5rem 3rem;
+}
+
+/*
+.main__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 3rem;
+  margin: 3rem;
+} */
+
+
+
+
+
+/* FOOTER */
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.footer__image {
+  margin-bottom: 1.5rem;
+}
+
+.footer__social {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.social-media__logo {
+  border: 1px solid black;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0.6rem;
+  height: 4rem;
+  width: 4rem;
+  overflow: visible;
+  transition: ease-in-out 0.3s, transform 0.1s;
+}
+
+.social-media__logo:hover {
+  background-color: white;
+  filter: brightness(1) invert(1);
+}
+
+.social-media__logo:active {
+  transform: scale(0.9);
+}
