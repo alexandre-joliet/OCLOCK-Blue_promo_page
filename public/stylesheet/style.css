@@ -32,7 +32,7 @@ h1 {
 }
 
 
-/* BODY */
+/* BODY INDEX + STUDENTS */
 body {
   display: flex;
   flex-direction: column;
@@ -46,7 +46,10 @@ body {
 
 main {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  width: 100vw;
 }
 
 .article {
@@ -55,7 +58,7 @@ main {
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin: 8rem 0;
+  margin: 8rem 0 8rem 0;
   width: 80%;
 }
 
@@ -75,29 +78,116 @@ main {
   margin-bottom: 2rem;
 }
 
+.text__bottom {
+  margin-bottom: 5rem;
+}
+
 em {
   font-weight: 700;
   font-size: 1.8rem;
   font-style: normal ;
 }
 
-.article__link {
+.button {
   background-color: black;
   border: none;
   border-radius: 5px;
+  box-shadow: 0px 3px 10px rgb(200, 200, 200);;
   color: white;
   font-weight: 700;
-  margin-top: 4rem;
   padding: 1.5rem;
   text-decoration: none;
   transition: ease-in-out 0.3s, transform 0.1s;
 }
 
-.article__link:hover {
+.button:hover {
   background-color: white;
   border: 1px solid black;
   color: black; 
 }
+
+
+/* STUDENTS CARDS */
+
+.main__card__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 4rem 0;
+  width: 80%;
+}
+
+.card {
+  /* border: 1px solid black; */
+  border-radius: 5px;
+  box-shadow: 0px 0px 3px rgb(200, 200, 200);;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 0;
+  margin-bottom: 3rem;
+  text-align: center;
+  height: 20rem;
+  width: 90%;
+  position: relative;
+}
+
+.card__icon {
+  width: 4rem;
+  position: absolute;
+  top: -1.8rem;
+  z-index: 9;
+}
+
+.card__banner {
+  background-color: black;
+  color: white;
+  border-radius: 5px 5px 0 0;
+  font-size: 2rem;
+  font-family: 'Playfair Display', sans-serif;
+  font-weight: 700;
+  padding: 2rem 0 0.75rem 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.blue__point1 {
+  color: blue;
+  font-size: 4rem;
+  line-height: 0.5;
+}
+
+.student__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 5rem 2rem 1rem 2rem;
+  width: 100%;
+}
+
+.card__social {
+  border-top: 1px solid lightgray ;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.4rem;
+  width: 100%;
+  text-decoration: none;
+}
+
+.github__icon {
+  width: 2rem;
+}
+
+.button--home {
+  margin-bottom: 8rem;
+}
+
+
 
 /* FOOTER */
 .footer {
@@ -106,7 +196,7 @@ em {
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin-bottom: 3rem;
+  margin: 4rem 0 3rem 0;
 }
 
 .footer__image {
