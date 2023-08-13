@@ -121,16 +121,22 @@ em {
 
 .card {
   border-radius: 5px;
-  box-shadow: 0px 0px 3px rgb(200, 200, 200);;
+  box-shadow: 0px 0px 3px rgb(200, 200, 200);
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 3rem 0;
   margin-bottom: 3rem;
   text-align: center;
+  position: relative;
+  transition: all 0.3s;
   height: 20rem;
   width: 90%;
-  position: relative;
+}
+
+.card:hover {
+  box-shadow: 1px 1px 5px rgb(200, 200, 200);
+  transform: scale(1.1);
 }
 
 .card__icon {
@@ -297,6 +303,19 @@ MEDIA QUERIES
 }
 
 @media all and (min-width:1024px) {
+
+  .main__card__container {
+    gap: 5rem;
+    width: 90%;
+  }
+
+  .card {
+    width: 20%;
+  }
+
+}
+
+@media all and (min-width:1440px) {
 
   .main__card__container {
     gap: 5rem;
