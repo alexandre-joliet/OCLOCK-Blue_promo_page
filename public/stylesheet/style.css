@@ -267,6 +267,14 @@ MEDIA QUERIES
     font-size: 4rem;
   }
 
+  .article__title {
+    font-size: 4rem;
+  }
+
+  .blue__point {
+    font-size: 5rem;
+  }
+
   .card {
     width: 30%;
   }
@@ -290,6 +298,14 @@ MEDIA QUERIES
   
   .header__title {
     font-size: 4.5rem;
+  }
+
+  .article__title {
+    font-size: 5rem;
+  }
+
+  .blue__point {
+    font-size: 6rem;
   }
 
   .card {
