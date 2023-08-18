@@ -1,0 +1,160 @@
+/*******************
+ALL STUDENT
+***************/
+.header {
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid lightgray;
+}
+
+.header__title {
+  border-bottom: none;
+}
+
+
+/*******************
+ONE STUDENT
+***************/
+.main__card__container--student {
+  margin: 8rem 0 4rem 0;
+}
+
+.card--student {
+  border-radius: 10px;
+  padding: 3rem 1.5rem 0 1.5rem;
+  margin-bottom: 2rem;
+  text-align: left;
+  width: 75%;
+  height: 100%;
+}
+
+.card--student:hover {
+  box-shadow: 0px 0px 3px rgb(200, 200, 200);
+  transform: none;
+}
+
+.card__icon--student {
+  width: 6rem;
+  top: -3rem;
+}
+
+.card__banner--student {
+  border-radius: 10px 10px 0 0;
+  font-size: 3rem;
+  padding: 3rem 0 0.75rem 0;
+  text-align: center;
+}
+
+.blue__point1--student {
+  font-size: 5rem;
+}
+
+.student__card__picture--student {
+  margin: 8rem 0 1rem 0;
+  width: 14rem;
+}
+
+.student__infos {
+  padding: 1rem 4rem;
+}
+
+.card__social--student {
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.github__icon--student {
+  width: 5rem;
+}
+
+.students__buttons {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.button--home--student {
+  margin-bottom: 1rem;
+}
+
+
+/*******************
+MEDIA QUERIES
+***************/
+
+@media all and (min-width:320px) {
+
+  .main__card__container--student {
+    margin: 4rem 0 4rem 0;
+    width: 100%;
+  }
+  
+  .card--student {
+    width: 80%;
+  }
+
+  .students__buttons {
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+
+}
+
+@media all and (min-width:768px) {
+
+  .main__card__container--student {
+    margin: 6rem 0 4rem 0;
+    width: 100%;
+  }
+  
+  .card--student {
+    width: 70%;
+  }
+
+  .students__buttons {
+    flex-direction: row;
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+  }
+
+}
+
+@media all and (min-width:1024px) {
+
+  .main__card__container--student {
+    margin: 8rem 0 4rem 0;
+    width: 100%;
+  }
+  
+  .card--student {
+    width: 50%;
+  }
+
+  .students__buttons {
+    flex-direction: row;
+    gap: 2rem;
+    margin-bottom: 5rem;
+  }
+
+}
+
+@media all and (min-width:1440px) {
+
+  .main__card__container--student {
+    margin: 8rem 0 4rem 0;
+    width: 100%;
+  }
+  
+  .card--student {
+    width: 25%;
+  }
+
+  .students__buttons {
+    flex-direction: row;
+    gap: 2rem;
+    margin-bottom: 5rem;
+  }
+
+}

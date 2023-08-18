@@ -1,0 +1,45 @@
+<%- include('partials/header') %>
+
+<% let searchedStudent = '';
+
+for (const student of students) {
+  if(student.pseudoGithub === pseudo) {
+    searchedStudent = student;
+  }
+} %>
+
+<div class="main__wrapper">
+
+  <div class="main__card__container main__card__container--student">
+
+    <div class="card card--student">
+      <img class="card__icon card__icon--student" src="/images/cheesecake.png" alt="">
+      <p class="card__banner card__banner--student">Blue<span class="blue__point1 blue__point1--student">.</span></p>
+        <img class="student__card__picture student__card__picture--student" src="https://github.com/<%=searchedStudent.pseudoGithub%>.png"; onerror="this.onerror=null;this.src='https://ae01.alicdn.com/kf/HTB15YI6a_lYBeNjSszcq6zwhFXas/DIY-5D-Square-Diamond-Painting-Tabby-Kitten-and-Daisy-Flowers-Mosaic-Pattern-Rhinestones-Crystal-Handmade-Diamond.jpg';" alt="">
+
+        <ul class="student__infos">
+          <li><em>Nom de famille :</em> <%=searchedStudent.lastname%></li>
+          <li><em>Prénom :</em> <%=searchedStudent.firstname%></li>
+          <li><em>Pseudo github :</em> <%=searchedStudent.pseudoGithub%></li>
+          <li><em>Anecdote marrante :</em> <%=searchedStudent.anecdoteMarrante%></li>
+      </ul>
+        <div class="card__social card__social--student">
+          <a href="https://github.com/<%=searchedStudent.pseudoGithub%>" target="_blank"><img class="github__icon github__icon--student" src="/images/LogosGithubIcon.svg"></a>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="students__buttons">
+  <a class="button button--home button--home--student" href="/students">Retour aux étudiants</a>
+  <a class="button button--home--student" href="/">Accueil</a>
+</div>
+  
+
+<img class="home__picture" src="/images/cheesecake-with-fresh-fruit.png" alt="">
+
+</div>
+
+<%- include('partials/footer') %>

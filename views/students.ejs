@@ -1,0 +1,33 @@
+<%- include('./partials/header') %>
+
+<div class="main__wrapper">
+  <div class="main__card__container">
+
+  <% for (const student of students) { %>
+    
+    <div class="card">
+      <img class="card__icon" src="/images/cheesecake.png" alt="">
+      <p class="card__banner">Blue<span class="blue__point1">.</span></p>
+      <a class="student__card" href="/students/<%=student.pseudoGithub%>">
+        <img class="student__card__picture" src="https://github.com/<%=student.pseudoGithub%>.png"; onerror="this.onerror=null;this.src='https://ae01.alicdn.com/kf/HTB15YI6a_lYBeNjSszcq6zwhFXas/DIY-5D-Square-Diamond-Painting-Tabby-Kitten-and-Daisy-Flowers-Mosaic-Pattern-Rhinestones-Crystal-Handmade-Diamond.jpg';" alt="">
+        <p><%= student.firstname %></p>
+        <p><%= student.lastname %></p>
+      </a>
+        <div class="card__social">
+          <a href="https://github.com/<%=student.pseudoGithub%>" target="_blank"><img class="github__icon" src="/images/LogosGithubIcon.svg"></a>
+        </div>
+    </div>
+  <% } %>
+
+  </div>
+
+  <a class="button button--home" href="/">Accueil</a>
+
+
+  <img class="home__picture hidden" src="/images/cheesecake-with-fresh-fruit.png" alt="">
+
+</div>
+
+
+<%- include('./partials/footer') %>
+

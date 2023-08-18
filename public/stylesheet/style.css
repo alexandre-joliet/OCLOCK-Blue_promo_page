@@ -12,23 +12,19 @@ html {
 /* HEADER */
 .header {
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
   border-bottom: 1px solid lightgray;
   padding: 1rem 0;
   width: 100%;
 }
 
-.header__logo {
-  width: 2rem;
-  padding-bottom: 0.4rem;
-}
-
 .header__title {
+  color: black;
   font-family: 'Playfair Display', sans-serif;
   font-size: 3.5rem;
   font-weight: 700;
-  line-height: 1;
+  text-decoration: none;
 }
 
 
@@ -88,6 +84,10 @@ em {
   font-style: normal ;
 }
 
+.minouche {
+  font-size: 1.2rem;
+}
+
 .button {
   background-color: black;
   border: 1px solid black;
@@ -109,6 +109,14 @@ em {
 
 /* STUDENTS CARDS */
 
+.main__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+}
+
 .main__card__container {
   display: flex;
   align-items: center;
@@ -125,12 +133,12 @@ em {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 3rem 0;
+  padding: 3rem 1.5rem;
   margin-bottom: 3rem;
   text-align: center;
   position: relative;
   transition: all 0.3s;
-  height: 20rem;
+  height: 26rem;
   width: 90%;
 }
 
@@ -166,12 +174,19 @@ em {
 }
 
 .student__card {
+  color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  padding: 5rem 2rem 1rem 2rem;
+  padding: 5rem 1rem 1rem 1rem;
+  text-decoration: none;
   width: 100%;
+}
+
+.student__card__picture {
+  border-radius: 50%;
+  width: 5rem;
 }
 
 .card__social {
@@ -179,13 +194,17 @@ em {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  padding: 1.3rem;
+  padding: 1.2rem;
   width: 100%;
   text-decoration: none;
 }
 
 .github__icon {
   width: 2.5rem;
+  transition: ease-in-out 0.2s}
+
+.github__icon:hover {
+  transform: scale(1.2);
 }
 
 .button--home {
@@ -203,7 +222,7 @@ em {
   margin: 4rem 0 3rem 0;
 }
 
-.footer__image {
+.home__picture {
   margin-bottom: 1.5rem;
 }
 
@@ -234,6 +253,19 @@ em {
   transform: scale(0.9);
 }
 
+.notFound__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 3rem;
+  text-align: center;
+}
+
+.notFound__title {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
 
 /*******************
 MEDIA QUERIES
@@ -250,18 +282,13 @@ MEDIA QUERIES
     width: 45%;
   }
 
-  .footer__image {
+  .home__picture {
     width: 85%;
   }
 
 }
 
 @media all and (min-width:768px) {
-
-  .header__logo {
-    width: 2.5rem;
-    padding-bottom: 0.4rem;
-  }
   
   .header__title {
     font-size: 4rem;
@@ -279,7 +306,7 @@ MEDIA QUERIES
     width: 30%;
   }
 
-  .footer__image {
+  .home__picture {
     width: 65%;
   }
 
@@ -291,13 +318,25 @@ MEDIA QUERIES
 
 @media all and (min-width:1024px) {
 
-  .header__logo {
-    width: 3rem;
-    padding-bottom: 0.4rem;
+  .header {
+    justify-content: flex-start;
+    border-bottom: none;
+    padding: 2rem;
   }
   
   .header__title {
     font-size: 4.5rem;
+    border-bottom: 1px solid lightgray;
+  }
+  
+  main {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .article {
+    width: 50%;
   }
 
   .article__title {
@@ -308,25 +347,18 @@ MEDIA QUERIES
     font-size: 6rem;
   }
 
-  .card {
-    width: 23%;
+  .home__picture {
+    width: 50%;
+    padding: 0rem 3rem;
   }
-
-  .footer__image {
-    max-width: 30%;
-  }
-
-}
-
-@media all and (min-width:1024px) {
-
+  
   .main__card__container {
     gap: 5rem;
     width: 90%;
   }
 
   .card {
-    width: 20%;
+    width: 23%;
   }
 
 }
@@ -340,6 +372,10 @@ MEDIA QUERIES
 
   .card {
     width: 15%;
+  }
+
+  .home__picture {
+    width: 25%;
   }
 
 }

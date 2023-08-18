@@ -1,105 +1,47 @@
 // ##############################
 // --- Imports ---
 // #########################
+
 // On importe express
 const express = require('express');
 
 // On initialise le server dans une variable
 const app = express();
-const path = require('path');
-app.use(express.static(path.join(__dirname, 'public')));
 
-// On importe la liste des étudiants
-const students = require('./students');
+const PORT = 3000;
 
-// On importe les détails de la promo
-const promo = require('./promo');
+const router = require('./app/router');
+const notFound = require('./app/middlewares/notFound');
+
+
+// ##############################
+// --- Settings ---
+// #########################
+
+// On dit à Express d'utiliser EJS comme moteur de rendu
+app.set('view engine', 'ejs');
+
+// On dit à Express où aller chercher nos views
+app.set('views', './views');
+
+// On dit à Express d'utiliser nos assets static
+app.use(express.static('public'));
 
 
 // ##############################
 // --- Routes ---
 // #########################
-// On créé une route pour la page d'accueil
-app.get('/', (req, res) => {
-  res.send(createHomePage());
-});
 
-// On créé une route pour afficher la liste des étudiants
-app.get('/students', (req, res) => {
-  res.send(createStudentListPage(students));
-});
+app.use(router);
 
-// On créé une route pour afficher le détail d'un étudiant
-app.get('/students/:githubUsername', (req, res) => {
-
-});
+app.use(notFound);
 
 
 // ##############################
-// --- Bind & Listen ---
+// --- Listen ---
 // #########################
+
 // On branche notre server au port 3000 et on lui demande d'écouter les requêtes entrantes vers ce port
-app.listen(3000);
-
-
-// ##############################
-// --- Functions ---
-// #########################
-/**
- * createHomePage()
- * 
- * Génère la page d'accueil de notre site
- */
-function createHomePage() {
-  const html = `
- 
-    <h1>${promo.name}</h1>
-
-    <p>Il y a ${students.length} apprenants dans cette promo</p>
-    <p>Cette promo est animée par ${promo.prof} et ${promo.helper}</p>
-
-    <a href="/students">Voir la liste des étudiants</a>
-
-  </body>
-  </html>
-  `;
-  return html;
-}
-
-
-/**
- * createStudentListPage(studentList)
- * 
- * Génère la page avec la liste des étudiants de la promo
- */
-function createStudentListPage(studentList) {
-  let html = 
-  `<ul>`;
-
-  for (const student of studentList) {
-    html += 
-    `
-    <li>
-      <a href="">${student.firstname} - ${student.lastname} - ${student.pseudoGithub}</a>
-    </li>
-    `;
-  }
-
-  html += '</ul>';
-
-  return html;
-}
-
-
-/**
- * createProfilePage(studentList, pseudo)
- * 
- * Génère la page profil d'un étudiant
- */
-
-
-// let html2 = "<ul>";
-
-//     for(let index = 1, index < 5, index++) {
-//       html2 += `<li>item ${index}</li>`;
-//     }
+app.listen(PORT, () => {
+  console.log(`Server is listening to @http://localhost${PORT}`);
+});

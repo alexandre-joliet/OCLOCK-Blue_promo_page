@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cheesecake - Le site officiel</title>
+
+  <link rel="stylesheet" href="/stylesheet/reset.css">
+  <link rel="stylesheet" href="/stylesheet/style.css">
+
+  <% if (path.includes("/student")) { %>
+    <link rel="stylesheet" href="/stylesheet/students.css">
+  <% } %>
+
+</head>
+<body>
+
+  <header class="header">
+    <h1><a class="header__title" href="/">Cheesecake</a></h1>
+  </header>
+  
+  <main>
